@@ -2,8 +2,8 @@
 export default function SearchForm({ onSearch, initialQuery = '' }) {
   const handleSearch = (event) => {
     event.preventDefault();
-
-    const searchQuery = event.target.query.value;
+    const data = new FormData(event.target);
+    const searchQuery = data.get('query');
     onSearch(searchQuery);
   };
 
