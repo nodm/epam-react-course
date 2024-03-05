@@ -34,6 +34,7 @@ export default class Counter extends React.Component {
       'span',
       {
         className: 'mx-4 py-2 px-8 font-bold rounded-md border border-slate-200 text-slate-900',
+        'data-testid': 'counter-value',
       },
       this.state.count,
     );
