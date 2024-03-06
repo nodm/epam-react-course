@@ -1,0 +1,59 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing <GenreSelect /> > should renders all genres passed in props (with snapshot) 1`] = `
+<div>
+  <div
+    class="py-4 bg-slate-800"
+  >
+    <ul
+      class="bg-slate-800 border-b-2 border-slate-600"
+    >
+      <li
+        class="inline-block mx-4 "
+      >
+        <button
+          class="py-3 text-white uppercase select-none"
+        >
+          one
+        </button>
+      </li>
+      <li
+        class="inline-block mx-4 "
+      >
+        <button
+          class="py-3 text-white uppercase select-none"
+        >
+          two
+        </button>
+      </li>
+      <li
+        class="inline-block mx-4 "
+      >
+        <button
+          class="py-3 text-white uppercase select-none"
+        >
+          three
+        </button>
+      </li>
+      <li
+        class="inline-block mx-4 border-b-2 border-red-400 mb-[-2px]"
+      >
+        <button
+          class="py-3 text-white uppercase select-none"
+        >
+          four
+        </button>
+      </li>
+      <li
+        class="inline-block mx-4 "
+      >
+        <button
+          class="py-3 text-white uppercase select-none"
+        >
+          five
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
