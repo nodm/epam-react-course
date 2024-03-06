@@ -20,11 +20,13 @@ function App() {
       <main>
         <Counter initialValue={3} />
         <SearchForm onSearch={handleSearch} initialQuery="React" />
-        <GenreSelect
-          genreList={GENRE_LIST}
-          initialGenre={GENRE_LIST[3]}
-          onSelect={handleGenreSelect}
-        />
+        <article data-testid="genre-selector">
+          <GenreSelect
+            genreList={GENRE_LIST}
+            initialGenre={GENRE_LIST[3]}
+            onSelect={handleGenreSelect}
+          />
+        </article>
       </main>
     </>
   );
