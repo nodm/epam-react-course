@@ -1,10 +1,9 @@
-import { describe, expect, test, afterEach, beforeAll, vi } from 'vitest';
 import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import GenreSelect from './GenreSelect';
 
 const genreList = ['one', 'two', 'three', 'four', 'five'];
-const handleSelect = vi.fn();
+const handleSelect = jest.fn();
 
 describe('Testing <GenreSelect />', () => {
   beforeAll(() => {
