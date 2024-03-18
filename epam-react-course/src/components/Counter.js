@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class Counter extends React.Component {
   static createButtonElement(label, onClick) {
@@ -10,6 +11,13 @@ export default class Counter extends React.Component {
       },
       label
     );
+  }
+
+  static propTypes = {
+    /**
+     * Optional initial Counter's value
+     */
+    initialValue: PropTypes.number,
   }
 
   constructor(props) {

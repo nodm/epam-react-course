@@ -1,10 +1,11 @@
-// eslint-disable-next-line react/prop-types
-export default function SearchForm({ onSearch, initialQuery = '' }) {
+import PropTypes from 'prop-types';
+
+export default function SearchForm({ onSearch, initialQuery }) {
   const handleSearch = (event) => {
     event.preventDefault();
     const data = new FormData(event.target);
     const searchQuery = data.get('query');
-    onSearch(searchQuery);
+    onSearch?.(searchQuery);
   };
 
   return (
@@ -24,3 +25,19 @@ export default function SearchForm({ onSearch, initialQuery = '' }) {
     </div>
   );
 }
+
+SearchForm.propTypes = {
+  /**
+   * Optional initial value of the search field
+   */
+  initialQuery: PropTypes.string,
+  /**
+   * Optional search handler
+   */
+  onSearch: PropTypes.func.isRequired,
+};
+
+SearchForm.defaultProps = {
+  initialQuery: '',
+  onSearch: undefined,
+};

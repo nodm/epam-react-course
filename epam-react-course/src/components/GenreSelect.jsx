@@ -1,4 +1,5 @@
 import * as React from 'react';
+import PropTypes from 'prop-types';
 
 // eslint-disable-next-line react/prop-types
 export default function GenreSelect({ genreList = [], initialGenre, onSelect }) {
@@ -10,7 +11,7 @@ export default function GenreSelect({ genreList = [], initialGenre, onSelect }) 
     }
 
     setActiveGenre(selectedGenre);
-    onSelect(selectedGenre);
+    onSelect?.(selectedGenre);
   };
 
   return (
@@ -33,3 +34,24 @@ export default function GenreSelect({ genreList = [], initialGenre, onSelect }) 
     </div>
   );
 }
+
+GenreSelect.propTypes = {
+  /**
+   * Optional array of available genres
+   */
+  genreList: PropTypes.arrayOf(PropTypes.string),
+  /**
+   * Optional initially selected genre (a value from the "genreList" array)
+   */
+  initialGenre: PropTypes.string,
+  /**
+   * Optional genre select handler
+   */
+  onSelect: PropTypes.func,
+};
+
+GenreSelect.defaultProps = {
+  genreList: [],
+  initialGenre: '',
+  onSelect: undefined,
+};
